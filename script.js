@@ -22,5 +22,16 @@ signupSignupButton.addEventListener("click", function (e) {
   localStorage.setItem("username", signupUsernameInput.value);
   localStorage.setItem("password", signupPasswordInput.value);
 
-  window.location.href = "login.html";
+  if (signupUsernameInput.value === "" || signupPasswordInput.value === "") {
+    alert("You need to fill the inputs.");
+  } else {
+    window.location.href = "login.html";
+  }
+});
+
+signupClearButton.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  signupUsernameInput.value = "";
+  signupPasswordInput.value = "";
 });
