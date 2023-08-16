@@ -8,22 +8,25 @@
   </head>
   <body>
     <div class="parent">
-      <div class="container">
-        Username:
-        <input type="text" name="name" id="login-username-input" />
-        <br />
-        Password:
-        <input type="password" name="password" id="login-password-input" />
-        <br />
-        <div class="buttons">
-          <button id="login-login-button">Log In</button>
-          <button id="login-clear-button">Clear</button> <br />
-          <button id="create-account" class="remove-button">
-            Create an account
-          </button>
+      <fieldset>
+        <legend>Log In</legend>
+        <div class="container">
+          Username:
+          <input type="text" name="name" id="login-username-input" />
+          <br />
+          Password:
+          <input type="password" name="password" id="login-password-input" />
+          <br />
+          <div class="buttons">
+            <button id="login-login-button">Log In</button>
+            <button id="login-clear-button">Clear</button> <br />
+            <button id="create-account" class="remove-button">
+              Create an account
+            </button>
+          </div>
+          <span id="news-feed-output-text"></span>
         </div>
-        <span id="news-feed-output-text"></span>
-      </div>
+      </fieldset>
     </div>
     <script src="script.js"></script>
   </body>
