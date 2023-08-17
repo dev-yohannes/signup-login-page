@@ -11,20 +11,32 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* background: linear-gradient(to left bottom, cyan, rgb(0, 77, 128)); */
+  background: linear-gradient(to left bottom, teal, black);
+}
+
+fieldset {
+  border: 1px dashed white;
+  border-radius: 5px;
+  padding: 20px;
+  color: white;
 }
 
 fieldset legend {
   font-size: 32px;
-  font-weight: bold;
 }
 
 .container {
-  /* border: 2px solid black; */
   padding: 20px;
 }
 
 .container input {
+  padding-left: 5px;
+  margin: 5px 0px;
+  height: 25px;
   width: 100%;
+  border: none;
+  border-radius: 3px;
 }
 
 .buttons {
@@ -34,10 +46,28 @@ fieldset legend {
   gap: 5px;
 }
 
-.buttons button {
+.buttons button,
+.create-account {
   padding: 5px 10px;
-  margin-top: 5px;
+  margin-top: 15px;
   width: 50%;
+  border: 1px solid white;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+
+.buttons button:hover,
+.create-account:hover {
+  color: white;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.added-text {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
 }
 
 .remove-button {
@@ -45,8 +75,6 @@ fieldset legend {
 }
 
 .create-account {
-  padding: 5px 10px;
-  margin-top: 5px;
   width: 100%;
 }
 

@@ -12,24 +12,39 @@ const newsFeed = [
   },
 ];
 
+function capitalizingFirstLetter() {
+  let strign = localStorage.getItem("username");
+  let result = strign.charAt(0).toUpperCase() + strign.slice(1);
+
+  return result;
+}
+
 // function
 function checkingUser() {
   if (
     loginUsernameInput.value === localStorage.getItem("username") &&
     loginPasswordInput.value === localStorage.getItem("password")
   ) {
+    alert(`Hello ${capitalizingFirstLetter()}, Welcome.`);
+
     addedText.innerHTML = newsFeed[0].username + ": " + newsFeed[0].timeline;
+    createAccountButotn.classList.add("remove-button");
   } else {
     alert("Wrong username or password. Try again");
     createAccountButotn.classList.remove("remove-button");
   }
 }
 
-// login section
 loginLoginButton.addEventListener("click", function (e) {
   e.preventDefault();
-
   checkingUser();
+});
+
+document.addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    checkingUser();
+  }
 });
 
 loginClearButton.addEventListener("click", function (e) {
@@ -38,6 +53,7 @@ loginClearButton.addEventListener("click", function (e) {
   loginUsernameInput.value = "";
   loginPasswordInput.value = "";
   addedText.innerHTML = "";
+  createAccountButotn.classList.add("remove-button");
 });
 
 createAccountButotn.addEventListener("click", function (e) {

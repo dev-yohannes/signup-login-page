@@ -14,10 +14,16 @@ function signupConditional() {
   }
 }
 
-// signup section
 signupSignupButton.addEventListener("click", function (e) {
   e.preventDefault();
   signupConditional();
+});
+
+document.addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    signupConditional();
+  }
 });
 
 signupClearButton.addEventListener("click", function (e) {
