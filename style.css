@@ -15,6 +15,10 @@
   background: linear-gradient(to left bottom, teal, black);
 }
 
+.parent h1 {
+  color: white;
+}
+
 fieldset {
   border: 1px dashed white;
   border-radius: 5px;
@@ -81,4 +85,21 @@ fieldset legend {
 .signup-username-input,
 .signup-password-input {
   padding-left: 2px;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  color: white;
+}
+
+table {
+  width: 500px;
+}
+
+th,
+td {
+  padding: 15px;
 }

@@ -2,7 +2,7 @@ const loginUsernameInput = document.querySelector("#login-username-input");
 const loginPasswordInput = document.querySelector("#login-password-input");
 let loginLoginButton = document.querySelector("#login-login-button");
 let loginClearButton = document.querySelector("#login-clear-button");
-const addedText = document.querySelector("#news-feed-output-text");
+// const addedText = document.querySelector("#news-feed-output-text");
 const createAccountButotn = document.querySelector("#create-account");
 
 const newsFeed = [
@@ -27,10 +27,12 @@ function checkingUser() {
   ) {
     alert(`Hello ${capitalizingFirstLetter()}, Welcome.`);
 
-    addedText.innerHTML = newsFeed[0].username + ": " + newsFeed[0].timeline;
+    // addedText.innerHTML = newsFeed[0].username + ": " + newsFeed[0].timeline;
+    window.location.href = "final.html";
+
     createAccountButotn.classList.add("remove-button");
   } else {
-    alert("Wrong username or password. Try again");
+    alert("Sorry wrong username or password. Try again");
     createAccountButotn.classList.remove("remove-button");
   }
 }
@@ -52,7 +54,7 @@ loginClearButton.addEventListener("click", function (e) {
 
   loginUsernameInput.value = "";
   loginPasswordInput.value = "";
-  addedText.innerHTML = "";
+  // addedText.innerHTML = "";
   createAccountButotn.classList.add("remove-button");
 });
 
