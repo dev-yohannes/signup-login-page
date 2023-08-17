@@ -6,7 +6,6 @@
     <title>Log In page</title>
     <link rel="stylesheet" href="style.css" />
     <!-- <script src="script.js" defer></script> -->
-    <script src="login.js" defer></script>
   </head>
   <body>
     <div class="parent">
@@ -14,7 +13,12 @@
         <legend>Log In</legend>
         <div class="container">
           Username:
-          <input type="text" name="name" id="login-username-input" />
+          <input
+            type="text"
+            name="name"
+            id="login-username-input"
+            autocomplete="off"
+          />
           <br />
           Password:
           <input type="password" name="password" id="login-password-input" />
@@ -22,13 +26,14 @@
           <div class="buttons">
             <button id="login-login-button">Log In</button>
             <button id="login-clear-button">Clear</button> <br />
-            <button id="create-account" class="remove-button">
-              Create an account
-            </button>
           </div>
+          <button id="create-account" class="remove-button create-account">
+            Create an account
+          </button>
           <span id="news-feed-output-text"></span>
         </div>
       </fieldset>
     </div>
+    <script src="login.js"></script>
   </body>
 </html>

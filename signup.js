@@ -3,10 +3,8 @@ const signupPasswordInput = document.querySelector("#signup-password-input");
 let signupSignupButton = document.querySelector("#signup-signup-button");
 let signupClearButton = document.querySelector("#signup-clear-button");
 
-// signup section
-signupSignupButton.addEventListener("click", function (e) {
-  e.preventDefault();
-
+// function
+function signupConditional() {
   if (signupUsernameInput.value === "" || signupPasswordInput.value === "") {
     alert("You need to fill the inputs.");
   } else {
@@ -14,6 +12,12 @@ signupSignupButton.addEventListener("click", function (e) {
     localStorage.setItem("username", signupUsernameInput.value);
     localStorage.setItem("password", signupPasswordInput.value);
   }
+}
+
+// signup section
+signupSignupButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  signupConditional();
 });
 
 signupClearButton.addEventListener("click", function (e) {

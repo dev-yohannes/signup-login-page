@@ -44,6 +44,12 @@ fieldset legend {
   display: none;
 }
 
+.create-account {
+  padding: 5px 10px;
+  margin-top: 5px;
+  width: 100%;
+}
+
 .signup-username-input,
 .signup-password-input {
   padding-left: 2px;

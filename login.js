@@ -18,7 +18,7 @@ function checkingUser() {
     loginUsernameInput.value === localStorage.getItem("username") &&
     loginPasswordInput.value === localStorage.getItem("password")
   ) {
-    console.log(newsFeed);
+    addedText.innerHTML = newsFeed[0].username + ": " + newsFeed[0].timeline;
   } else {
     alert("Wrong username or password. Try again");
     createAccountButotn.classList.remove("remove-button");
@@ -37,4 +37,10 @@ loginClearButton.addEventListener("click", function (e) {
 
   loginUsernameInput.value = "";
   loginPasswordInput.value = "";
+  addedText.innerHTML = "";
+});
+
+createAccountButotn.addEventListener("click", function (e) {
+  e.preventDefault();
+  window.location.href = "signup.html";
 });
