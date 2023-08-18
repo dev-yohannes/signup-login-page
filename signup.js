@@ -2,6 +2,7 @@ const signupUsernameInput = document.querySelector("#signup-username-input");
 const signupPasswordInput = document.querySelector("#signup-password-input");
 let signupSignupButton = document.querySelector("#signup-signup-button");
 let signupClearButton = document.querySelector("#signup-clear-button");
+let passwordStrength = document.querySelector("#password-strength");
 
 // function
 function signupConditional() {
@@ -13,6 +14,25 @@ function signupConditional() {
     localStorage.setItem("password", signupPasswordInput.value);
   }
 }
+
+function passwordStrengthChecker() {
+  if (signupPasswordInput.length > 3) {
+    passwordStrength.innerHTML = "Weak";
+    console.log("weak");
+  } else if (signupPasswordInput.length > 5) {
+    passwordStrength.innerHTML = "Medium";
+    console.log("medium");
+  } else if (signupPasswordInput.length > 7) {
+    passwordStrength.innerHTML = "Strong";
+    console.log("strong");
+  }
+}
+
+signupPasswordInput.addEventListener("mouseleave", function () {
+  // passwordStrength.innerHTML = console.log(passwordStrengthChecker());
+
+  passwordStrengthChecker();
+});
 
 signupSignupButton.addEventListener("click", function (e) {
   e.preventDefault();

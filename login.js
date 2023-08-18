@@ -4,6 +4,7 @@ let loginLoginButton = document.querySelector("#login-login-button");
 let loginClearButton = document.querySelector("#login-clear-button");
 // const addedText = document.querySelector("#news-feed-output-text");
 const createAccountButotn = document.querySelector("#create-account");
+let passwordStrength = document.querySelector("#password-strength");
 
 const newsFeed = [
   {
@@ -30,10 +31,10 @@ function checkingUser() {
     // addedText.innerHTML = newsFeed[0].username + ": " + newsFeed[0].timeline;
     window.location.href = "final.html";
 
-    createAccountButotn.classList.add("remove-button");
+    // createAccountButotn.classList.add("remove-button");
   } else {
     alert("Sorry wrong username or password. Try again");
-    createAccountButotn.classList.remove("remove-button");
+    // createAccountButotn.classList.remove("remove-button");
   }
 }
 
@@ -55,7 +56,7 @@ loginClearButton.addEventListener("click", function (e) {
   loginUsernameInput.value = "";
   loginPasswordInput.value = "";
   // addedText.innerHTML = "";
-  createAccountButotn.classList.add("remove-button");
+  // createAccountButotn.classList.add("remove-button");
 });
 
 createAccountButotn.addEventListener("click", function (e) {
