@@ -87,6 +87,14 @@ fieldset legend {
   padding-left: 2px;
 }
 
+.view-icon {
+  width: 3%;
+  position: absolute;
+  top: 290px;
+  /* left: 570px; */
+  margin-left: 5px;
+}
+
 .final-table {
   margin: 0;
 }
