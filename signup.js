@@ -54,8 +54,16 @@ signupClearButton.addEventListener("click", function (e) {
   signupPasswordInput.value = "";
 });
 
+viewIcon.style.cursor = "pointer";
+
+let passwordInvisible = false;
+
 viewIcon.addEventListener("click", function (e) {
   e.preventDefault();
 
-  signupPasswordInput.type = "text";
+  if (signupPasswordInput.type === "password") {
+    signupPasswordInput.type = "text";
+  } else {
+    signupPasswordInput.type = "password";
+  }
 });

@@ -5,6 +5,7 @@ let loginClearButton = document.querySelector("#login-clear-button");
 // const addedText = document.querySelector("#news-feed-output-text");
 const createAccountButotn = document.querySelector("#create-account");
 let passwordStrength = document.querySelector("#password-strength");
+let viewIcon = document.querySelector("#view-icon");
 
 const newsFeed = [
   {
@@ -62,4 +63,14 @@ loginClearButton.addEventListener("click", function (e) {
 createAccountButotn.addEventListener("click", function (e) {
   e.preventDefault();
   window.location.href = "index.html";
+});
+
+viewIcon.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  if (loginPasswordInput.type === "password") {
+    loginPasswordInput.type = "text";
+  } else {
+    loginPasswordInput.type = "password";
+  }
 });

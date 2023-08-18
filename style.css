@@ -87,12 +87,23 @@ fieldset legend {
   padding-left: 2px;
 }
 
-.view-icon {
+/* .signup-password-input {
+  position: relative;
+} */
+
+.signup-view-icon {
   width: 3%;
   position: absolute;
-  top: 290px;
-  /* left: 570px; */
-  margin-left: 5px;
+  margin-top: 2px;
+  /* top: 290px; */
+  left: 570px;
+}
+
+.login-view-icon {
+  width: 3%;
+  position: absolute;
+  top: 259px;
+  left: 570px;
 }
 
 .final-table {
