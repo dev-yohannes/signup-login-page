@@ -60,5 +60,5 @@ loginClearButton.addEventListener("click", function (e) {
 
 createAccountButotn.addEventListener("click", function (e) {
   e.preventDefault();
-  window.location.href = "signup.html";
+  window.location.href = "index.html";
 });
