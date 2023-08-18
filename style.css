@@ -87,6 +87,10 @@ fieldset legend {
   padding-left: 2px;
 }
 
+.final-table {
+  margin: 0;
+}
+
 table,
 th,
 td {
@@ -96,7 +100,7 @@ td {
 }
 
 table {
-  width: 500px;
+  width: 80%;
 }
 
 th,
