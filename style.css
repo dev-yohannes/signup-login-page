@@ -92,22 +92,43 @@ fieldset legend {
 }
 
 .signup-view-icon {
-  width: 4%;
+  width: 3%;
   position: absolute;
-  margin-top: 9px;
-  margin-left: -20px;
-  /* top: 290px; */
-  /* left: 570px; */
-  z-index: 1;
+  margin-top: 12px;
+  margin-left: -1px;
+  top: 485px;
+  left: 570px;
+  /* z-index: 1; */
 }
 
 .login-view-icon {
-  width: 4%;
+  width: 3%;
   position: absolute;
-  margin-top: 9px;
-  margin-left: -20px;
-  /* top: 259px; */
-  /* left: 570px; */
+  /* margin-top: 9px; */
+  margin-left: -1px;
+  top: 465px;
+  left: 570px;
+}
+
+@media only screen and (max-width: 400px) {
+  .signup-view-icon {
+    width: 6%;
+    position: absolute;
+    margin-top: 9px;
+    margin-left: -2px;
+    top: 457px;
+    left: 290px;
+    z-index: 1;
+  }
+
+  .login-view-icon {
+    width: 6%;
+    position: absolute;
+    margin-top: 9px;
+    margin-left: -2px;
+    top: 426px;
+    left: 280px;
+  }
 }
 
 .final-table {
