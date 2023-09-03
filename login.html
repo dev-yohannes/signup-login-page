@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log In page</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- <script src="script.js" defer></script> -->
   </head>
   <body>
     <div class="parent">
@@ -23,21 +22,18 @@
           <br />
           Password:
           <input type="password" name="password" id="login-password-input" />
-          <img
-            class="login-view-icon"
-            id="view-icon"
-            src="icons/view password.svg"
-            alt=""
-          />
-          <span id="password-strength"></span>
-          <br />
-          <div class="buttons">
-            <button id="login-login-button">Log In</button>
-            <button id="login-clear-button">Clear</button> <br />
+          <div class="view-password-container">
+            <button class="view-password" id="view-password">
+              View Password
+            </button>
           </div>
           <button id="create-account" class="create-account">
             Create an account
           </button>
+          <div class="buttons">
+            <button id="login-login-button">Log In</button>
+            <button id="login-clear-button">Clear</button> <br />
+          </div>
           <span class="added-text" id="news-feed-output-text"></span>
         </div>
       </fieldset>
