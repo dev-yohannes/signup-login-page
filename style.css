@@ -11,8 +11,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background: linear-gradient(to left bottom, cyan, rgb(0, 77, 128)); */
-  background: linear-gradient(to left bottom, teal, black);
+  background: linear-gradient(to left bottom, cyan, rgb(112, 112, 112));
 }
 
 .parent h1 {
@@ -22,8 +21,9 @@
 fieldset {
   border: 1px dashed white;
   border-radius: 5px;
-  padding: 20px;
+  padding: 15px;
   color: white;
+  width: 25%;
 }
 
 fieldset legend {
@@ -48,6 +48,7 @@ fieldset legend {
   justify-content: center;
   align-items: center;
   gap: 5px;
+  width: 100%;
 }
 
 .buttons button,
@@ -58,6 +59,11 @@ fieldset legend {
   border: 1px solid white;
   border-radius: 3px;
   transition: all 0.2s;
+  cursor: pointer;
+}
+
+.create-account {
+  width: 100%;
 }
 
 .buttons button:hover,
@@ -91,44 +97,24 @@ fieldset legend {
   position: relative;
 }
 
-.signup-view-icon {
-  width: 3%;
-  position: absolute;
-  margin-top: 12px;
-  margin-left: -1px;
-  top: 485px;
-  left: 570px;
-  /* z-index: 1; */
+.password-strength-view-icon-button {
+  display: flex;
+  justify-content: space-between;
 }
 
-.login-view-icon {
-  width: 3%;
-  position: absolute;
-  /* margin-top: 9px; */
-  margin-left: -1px;
-  top: 465px;
-  left: 570px;
+.view-password {
+  padding: 2px 0px;
+  width: 50%;
+  border: 1px solid white;
+  border-radius: 3px;
+  transition: all 0.2s;
+  cursor: pointer;
 }
 
-@media only screen and (max-width: 400px) {
-  .signup-view-icon {
-    width: 6%;
-    position: absolute;
-    margin-top: 9px;
-    margin-left: -2px;
-    top: 457px;
-    left: 290px;
-    z-index: 1;
-  }
-
-  .login-view-icon {
-    width: 6%;
-    position: absolute;
-    margin-top: 9px;
-    margin-left: -2px;
-    top: 426px;
-    left: 280px;
-  }
+.view-password-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .final-table {
@@ -150,4 +136,22 @@ table {
 th,
 td {
   padding: 15px;
+}
+
+@media only screen and (max-width: 1300px) {
+  fieldset {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  fieldset {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  fieldset {
+    width: 100%;
+  }
 }
