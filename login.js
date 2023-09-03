@@ -2,17 +2,11 @@ const loginUsernameInput = document.querySelector("#login-username-input");
 const loginPasswordInput = document.querySelector("#login-password-input");
 let loginLoginButton = document.querySelector("#login-login-button");
 let loginClearButton = document.querySelector("#login-clear-button");
-// const addedText = document.querySelector("#news-feed-output-text");
 const createAccountButotn = document.querySelector("#create-account");
 let passwordStrength = document.querySelector("#password-strength");
-let viewIcon = document.querySelector("#view-icon");
+let viewPasswordButton = document.querySelector("#view-password");
 
-const newsFeed = [
-  {
-    username: "Andrie",
-    timeline: "Hellooooo",
-  },
-];
+// functions
 
 function capitalizingFirstLetter() {
   let strign = localStorage.getItem("username");
@@ -21,21 +15,15 @@ function capitalizingFirstLetter() {
   return result;
 }
 
-// function
 function checkingUser() {
   if (
     loginUsernameInput.value === localStorage.getItem("username") &&
     loginPasswordInput.value === localStorage.getItem("password")
   ) {
     alert(`Hello ${capitalizingFirstLetter()}, Welcome.`);
-
-    // addedText.innerHTML = newsFeed[0].username + ": " + newsFeed[0].timeline;
     window.location.href = "final.html";
-
-    // createAccountButotn.classList.add("remove-button");
   } else {
     alert("Sorry wrong username or password. Try again");
-    // createAccountButotn.classList.remove("remove-button");
   }
 }
 
@@ -56,8 +44,6 @@ loginClearButton.addEventListener("click", function (e) {
 
   loginUsernameInput.value = "";
   loginPasswordInput.value = "";
-  // addedText.innerHTML = "";
-  // createAccountButotn.classList.add("remove-button");
 });
 
 createAccountButotn.addEventListener("click", function (e) {
@@ -65,7 +51,7 @@ createAccountButotn.addEventListener("click", function (e) {
   window.location.href = "index.html";
 });
 
-viewIcon.addEventListener("click", function (e) {
+viewPasswordButton.addEventListener("click", function (e) {
   e.preventDefault();
 
   if (loginPasswordInput.type === "password") {

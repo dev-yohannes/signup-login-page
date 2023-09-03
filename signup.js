@@ -3,7 +3,7 @@ const signupPasswordInput = document.querySelector("#signup-password-input");
 let signupSignupButton = document.querySelector("#signup-signup-button");
 let signupClearButton = document.querySelector("#signup-clear-button");
 let passwordStrength = document.querySelector("#password-strength");
-let viewIcon = document.querySelector("#view-icon");
+let viewPasswordButton = document.querySelector("#view-password");
 
 // function
 
@@ -20,8 +20,6 @@ function passwordStrengthChecker() {
     passwordStrength.innerHTML = "Strong";
     passwordStrength.style.color = "green";
     signupConditional();
-
-    // signupSignupButton.disabled = false;
   }
 }
 
@@ -54,11 +52,9 @@ signupClearButton.addEventListener("click", function (e) {
   signupPasswordInput.value = "";
 });
 
-viewIcon.style.cursor = "pointer";
-
 let passwordInvisible = false;
 
-viewIcon.addEventListener("click", function (e) {
+viewPasswordButton.addEventListener("click", function (e) {
   e.preventDefault();
 
   if (signupPasswordInput.type === "password") {
