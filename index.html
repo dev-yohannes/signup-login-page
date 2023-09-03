@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up page</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- <script src="script.js" defer></script> -->
   </head>
   <body>
     <div class="parent">
@@ -23,7 +22,7 @@
           />
           <br />
           Password:
-          <section class="password-input-view-icon">
+          <div class="password-input-view-icon">
             <input
               class="signup-password-input"
               type="password"
@@ -31,14 +30,13 @@
               class="signup-password-input"
               id="signup-password-input"
             />
-            <img
-              class="signup-view-icon"
-              id="view-icon"
-              src="icons/view password.svg"
-              alt=""
-            />
-          </section>
-          <p id="password-strength"></p>
+          </div>
+          <div class="password-strength-view-icon-button">
+            <p id="password-strength"></p>
+            <button class="view-password" id="view-password">
+              View Password
+            </button>
+          </div>
           <br />
           <div class="buttons">
             <button id="signup-signup-button">Sign Up</button>
