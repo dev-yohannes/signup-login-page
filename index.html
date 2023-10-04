@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up page</title>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/bc257bab38.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- font awesome -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -22,7 +28,7 @@
           />
           <br />
           Password:
-          <div class="password-input-view-icon">
+          <div class="password-section">
             <input
               class="signup-password-input"
               type="password"
@@ -30,12 +36,17 @@
               class="signup-password-input"
               id="signup-password-input"
             />
+
+            <i class="fa-solid fa-eye icons" id="show-password"></i>
+            <i class="fa-solid fa-eye-slash icons" id="hide-password"></i>
           </div>
+
           <div class="password-strength-view-icon-button">
             <p id="password-strength"></p>
-            <button class="view-password" id="view-password">
+
+            <!-- <button class="view-password" id="view-password">
               View Password
-            </button>
+            </button> -->
           </div>
           <br />
           <div class="buttons">
@@ -45,6 +56,7 @@
         </div>
       </fieldset>
     </div>
-    <script src="signup.js"></script>
+    <!-- <script src="signup.js"></script> -->
+    <script src="signup2.js"></script>
   </body>
 </html>
