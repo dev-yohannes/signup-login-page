@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log In page</title>
+    <script
+      src="https://kit.fontawesome.com/bc257bab38.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -21,12 +25,16 @@
           />
           <br />
           Password:
-          <input type="password" name="password" id="login-password-input" />
-          <div class="view-password-container">
-            <button class="view-password" id="view-password">
-              View Password
-            </button>
+          <div class="password-section">
+            <input type="password" name="password" id="login-password-input" />
+            <i class="fa-solid fa-eye icons" id="show-password"></i>
+            <i class="fa-solid fa-eye-slash icons" id="hide-password"></i>
           </div>
+          <!-- <div class="view-password-container"> -->
+          <!-- <button class="view-password" id="view-password">
+              View Password
+            </button> -->
+          <!-- </div> -->
           <button id="create-account" class="create-account">
             Create an account
           </button>
@@ -38,6 +46,7 @@
         </div>
       </fieldset>
     </div>
-    <script src="login.js"></script>
+    <!-- <script src="login.js"></script> -->
+    <script src="login2.js"></script>
   </body>
 </html>
